@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🖼️ Image Effect Generator
 
-## Getting Started
+Une application web interactive pour générer des effets d'élévation sur des images et télécharger le rendu final.
 
-First, run the development server:
+## 📝 Description
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**Image Effect Generator** est un outil visuel développé avec **Next.js** et **Tailwind CSS**. Il permet d'ajouter dynamiquement des effets d’élévation (padding, bordures arrondies, ombres) sur des images téléchargées, puis de les exporter au format PNG.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+L'application est découpée en trois modules : chargement de l'image, personnalisation des effets, et export final.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🚀 Fonctionnalités
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Upload d’image avec aperçu instantané
+- Réglages dynamiques :
+  - Padding (`range`)
+  - Border Radius (`range`)
+  - Shadow Depth (`range`)
+- Génération de l’image en base64
+- Affichage avec rendu visuel personnalisé
+- Export PNG via [Resvg](https://github.com/RazrFalcon/resvg) et [Satori](https://github.com/vercel/satori)
 
-## Learn More
+## 🧠 Techniques utilisées
 
-To learn more about Next.js, take a look at the following resources:
+- Gestion des états avec [`useState`](https://react.dev/reference/react/useState)
+- Rendu dynamique basé sur les valeurs de padding, radius, et shadow
+- Utilisation de l'[API FileReader](https://developer.mozilla.org/fr/docs/Web/API/FileReader) pour convertir une image en base64
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Technologies & librairies
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- React.js
+- Next.js
+- Tailwind CSS
+- DaisyUI – Composants UI Tailwind
+- Satori – Génération de SVG depuis des composants React
+- @resvg/resvg-wasmresvg-wasm) – Rendu SVG → PNG
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Développé pour apprendre la structuration d’une application React moderne avec Next.js, la composition de composants réutilisables et la gestion des useState
