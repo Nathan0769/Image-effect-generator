@@ -56,9 +56,9 @@ export default function Home() {
   };
 
   return (
-    <div className="flex w-full min-h-screen p-8 gap-8">
+    <div className="flex flex-col lg:flex-row w-full min-h-screen p-4 lg:p-8 gap-4 lg:gap-8">
       {/* ← Colonne de gauche */}
-      <div className="w-1/2 flex-1 flex items-center justify-center">
+      <div className="w-full lg:w-1/2 flex-1 flex items-center justify-center">
         <div className="card bg-base-200 rounded-box w-80 shadow-lg">
           <div className="card-body p-6 space-y-4">
             <h2 className="card-title">Settings</h2>
@@ -130,7 +130,7 @@ export default function Home() {
       </div>
 
       {/* → Colonne Preview */}
-      <div className="w-1/2 p-8 flex flex-col ustify-center items-center space-y-4">
+      <div className="w-full lg:w-1/2 p-4 lg:p-8 flex flex-col justify-center items-center space-y-4">
         <div className="flex flex-1 items-center justify-center w-full max-h-[650px]">
           <div className="w-full max-w-[400px] max-h-[400px]">
             <ImageGenerator image={image} params={params} />
